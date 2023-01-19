@@ -3,11 +3,9 @@ import numpy as np
 def generate_matrix(dimensions) -> list:
   width, height = dimensions
   
-
-
   rng = np.random.default_rng()
   
-  matrix = rng.random(size=[height, width], dtype=np.float32)
+  matrix = rng.random(size=[width, height], dtype=np.float32)
   print(f"Matrix with shape {width}x{height} generated")
 
   return matrix
@@ -24,8 +22,7 @@ def main():
   matrix_b = matrixes[1]
   matrix_c = matrixes[2]
  
-  multiplied_matrix = np.matmul(np.matmul(matrix_c, matrix_b), matrix_a)
-  
+  multiplied_matrix = np.matmul(matrix_a, np.matmul(matrix_b, matrix_c))
   print("Final product shape: ", multiplied_matrix.shape)
   print("Multiplied matrix: ", multiplied_matrix)
 
