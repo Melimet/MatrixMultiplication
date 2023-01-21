@@ -14,14 +14,12 @@ def main():
   matrix_shapes = [[10**6, 10**3], [10**3, 10**6], [10**6, 1]]
   #matrix_shapes = [[5,5], [5,5], [5,5]]
   print("Generating matrixes...")
-  matrixes = list(map(generate_matrix, [(matrix_dimension[0], matrix_dimension[1]) for matrix_dimension in matrix_shapes]))
+  matrices = list(map(generate_matrix, [(matrix_dimension[0], matrix_dimension[1]) for matrix_dimension in matrix_shapes]))
 
   print("Multiplying matrix...") 
-  
-  matrix_a = matrixes[0]
-  matrix_b = matrixes[1]
-  matrix_c = matrixes[2]
- 
+
+  matrix_a, matrix_b , matrix_c = matrices
+
   multiplied_matrix = np.matmul(matrix_a, np.matmul(matrix_b, matrix_c))
   print("Final product shape: ", multiplied_matrix.shape)
   print("Multiplied matrix: ", multiplied_matrix)
