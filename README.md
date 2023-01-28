@@ -77,4 +77,6 @@ I faced issues with running out of memory when generating the randomized matrice
 
 I probably would have faced issues with memory a second time since calculating (A * B) * C would have ended up with a matrix shaped 1000000 x 1000000, but I quickly realised that [(A * B) * C = A * (B * C)](https://en.wikipedia.org/wiki/Matrix_multiplication#Associativity).
 
-I guess that the point of this assignment was to prove that not every problem should be solved with just using a more powerful machine(or buying more cloud compute!), but just coming up with smart ways to optimize the program.
+I guess that the point of this assignment was to prove that not every problem should be solved with just using a more powerful machine(or buying more cloud compute!), but just coming up with smart ways to optimize the program. This was also a great excuse to refresh my memory on matrix calculations :D
+
+My implementation was able to compute matrix D with the values given in the assignment.
