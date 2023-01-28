@@ -1,4 +1,5 @@
 import numpy as np
+from plotter import plotData
 
 def generate_matrix(dimensions) -> list:
   width, height = dimensions
@@ -21,7 +22,10 @@ def main():
   matrix_a, matrix_b , matrix_c = matrices
 
   multiplied_matrix = np.matmul(matrix_a, np.matmul(matrix_b, matrix_c))
+ 
   print("Final product shape: ", multiplied_matrix.shape)
   print("Multiplied matrix: ", multiplied_matrix)
+
+  plotData(matrix_a)
 
 main()
